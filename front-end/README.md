@@ -9,7 +9,7 @@ The front-end of the application is built using HTML, CSS, and JavaScript. It pr
 To set up the front-end, follow these steps:
 
 1. Clone the repository: \`git clone <repository URL>\`
-2. Navigate to the front-end directory: \`cd in main folder\`
+2. Navigate to the front-end directory: \`cd front-end\`
 3. start a live server extention
 4. Access the front-end in your browser
 
