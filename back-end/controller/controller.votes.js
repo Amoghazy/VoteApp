@@ -1,4 +1,6 @@
 import { Votes } from "../model/model.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 export const getvotes = async (req, res) => {
   let [db] = await Votes.find({}, { _id: 0 }).lean();

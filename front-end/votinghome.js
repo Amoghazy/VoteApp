@@ -29,7 +29,7 @@ class Poll {
         authorization: `Bearer ${sessionStorage.getItem("Token")}`,
         "Content-Type": "application/json",
       },
-    });
+    }).catch((err) => console.log(err));
     const data = await response.json();
     console.log(data);
 

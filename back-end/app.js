@@ -23,9 +23,7 @@ app.get("/", (req, res) => {
 app.get("/register", (req, res) => {
   res.sendFile(path.join(__dirname, "../front-end/register.html"));
 });
-app.get("/poll", (req, res) => {
-  res.sendFile(path.join(__dirname, "../front-end/votinghome.html"));
-});
+
 app.use(cors());
 app.post("/register", signup);
 
