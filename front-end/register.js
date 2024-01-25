@@ -65,7 +65,7 @@ function saveData() {
       email: email,
       password: password,
     };
-    fetch("https://votesappsystem.onrender.com/register", {
+    fetch("https://voteappsystem.onrender.com/register", {
       method: "post",
       body: JSON.stringify(data),
       headers: {

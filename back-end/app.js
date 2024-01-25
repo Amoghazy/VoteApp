@@ -7,7 +7,6 @@ const port = 3000;
 import { login, signup } from "./controller/controller.users.js";
 import { getvotes, sendvotes } from "./controller/controller.votes.js";
 import { verifyToken } from "./utlis/verifytoken.js";
-app.use(cors());
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -27,6 +26,7 @@ app.get("/register", (req, res) => {
 app.get("/poll", (req, res) => {
   res.sendFile(path.join(__dirname, "../front-end/votinghome.html"));
 });
+app.use(cors());
 app.post("/register", signup);
 
 app.post("/login", login);

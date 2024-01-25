@@ -9,7 +9,7 @@ class Poll {
     this.root = root;
     this.selected = sessionStorage.getItem("poll-selected");
     this.token = sessionStorage.getItem("Token");
-    this.endpoint = "https://votesappsystem.onrender.com/poll";
+    this.endpoint = "https://voteappsystem.onrender.com/poll";
 
     this.root.insertAdjacentHTML(
       "afterbegin",
