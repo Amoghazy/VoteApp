@@ -50,7 +50,6 @@ function validatePassword() {
 }
 
 function saveData() {
-
   validateName();
   validateEmail();
   validatePassword();
@@ -58,7 +57,6 @@ function saveData() {
   if (document.querySelectorAll(".is-invalid").length > 0) {
     alert("Please correct the validation errors before submitting.");
   } else {
-   
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -67,7 +65,7 @@ function saveData() {
       email: email,
       password: password,
     };
-    fetch("http://localhost:3000/register", {
+    fetch("https://votesappsystem.onrender.com/register", {
       method: "post",
       body: JSON.stringify(data),
       headers: {
@@ -85,13 +83,14 @@ function saveData() {
 
         return setTimeout(() => location.replace("login.html"), 5000);
       } else {
-        
         let err = await response.json();
         displayErrorMessage(emailInput, err.message);
         statustext.innerHTML = ` ${err.message}
         <br>
         please enter a valid data        `;
       }
+    }).catch((err) => {
+      console.log(err);
     });
   }
 }

@@ -1,13 +1,15 @@
 const progressBoxes = document.querySelectorAll(".progress-box");
 const percentTags = document.querySelectorAll(".percent-tag");
 const totalVotesElem = document.getElementById("totalVotes");
-document.querySelector("#navbars > ul > li:nth-child(1) > a").innerHTML = `HI ${sessionStorage.getItem("email").split("@")[0]}`;
+document.querySelector("#navbars > ul > li:nth-child(1) > a").innerHTML = `HI ${
+  sessionStorage.getItem("email").split("@")[0]
+}`;
 class Poll {
   constructor(root, title) {
     this.root = root;
     this.selected = sessionStorage.getItem("poll-selected");
     this.token = sessionStorage.getItem("Token");
-    this.endpoint = "http://localhost:3000/poll";
+    this.endpoint = "https://votesappsystem.onrender.com/poll";
 
     this.root.insertAdjacentHTML(
       "afterbegin",

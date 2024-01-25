@@ -11,7 +11,7 @@ loginBtn.addEventListener("click", async (e) => {
     password: password,
   };
 
-  let res = await fetch("http://localhost:3000/login", {
+  let res = await fetch("https://votesappsystem.onrender.com/login", {
     method: "post",
     body: JSON.stringify(dataLogin),
     headers: {
