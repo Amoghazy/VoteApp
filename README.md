@@ -27,8 +27,8 @@ To set up the back-end, follow these steps:
 3. Install the dependencies: `npm install`
 4. Download and install MongoDB from the official website: https://www.mongodb.com/try/download/community
    ![MongoDB Download](https://miro.medium.com/v2/resize:fit:1400/1*Sjs7Nzu_bTD8yTxc7ssVXQ.png)
-   4.1 check the package is msi
-   4.2 can follow this link to setup https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514
+   - check the package is msi.
+   - can follow this link to setup https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514
 5. Start the MongoDB server.
 6. Configure the database connection in the back-end code to connect to your locally running MongoDB instance.
 7. Start the server: `npm run start`
