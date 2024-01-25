@@ -14,7 +14,7 @@ export const User = mongoose.model("Information", userSchema);
 
 export const Votes = mongoose.model("votes", voteSchema);
 mongoose
-  .connect("mongodb://localhost:27017/VoteApp")
+  .connect(process.env.mongoUrl)
   .then(() => {
     console.log("Connected to MongoDB");
   })

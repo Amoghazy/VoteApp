@@ -18,6 +18,6 @@ export const sendvotes = async (req, res) => {
   db[req.body.add]++;
 
   let x = await Votes.findOneAndUpdate({}, { ...db });
-  console.log(x);
+
   res.end(JSON.stringify(db));
 };
