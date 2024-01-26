@@ -20,6 +20,7 @@ loginBtn.addEventListener("click", async (e) => {
   });
 
   let data = await res.json();
+
   if (res.status === 200) {
     sessionStorage.setItem("Token", data.token);
     sessionStorage.setItem("email", data.email);
@@ -30,5 +31,9 @@ loginBtn.addEventListener("click", async (e) => {
     waiting ... home page is loaded         `;
 
     return setTimeout(() => location.replace("votinghome.html"), 4000);
+  } else {
+    statustext.innerHTML = ` ${data.message};
+  <br>
+  Try again...!         `;
   }
 });
