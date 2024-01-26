@@ -38,7 +38,7 @@ export const login = async (req, res) => {
       let token = jwt.sign(
         { email: isFind.email, id: isFind._id },
         "ahmedmoghazy",
-        { expiresIn: "5mm" }
+        { expiresIn: "5m" }
       );
       res
         .status(200)
