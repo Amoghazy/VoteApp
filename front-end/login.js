@@ -32,6 +32,7 @@ loginBtn.addEventListener("click", async (e) => {
 
     return setTimeout(() => location.replace("votinghome.html"), 4000);
   } else {
+    statustext.style.color = "red";
     statustext.innerHTML = ` ${data.message};
   <br>
   Try again...!         `;
