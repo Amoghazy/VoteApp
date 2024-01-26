@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 const port = 3000;
 import { login, signup } from "./controller/controller.users.js";
-import { getvotes, sendvotes } from "./controller/controller.votes.js";
+import { getvotes, sendVotes } from "./controller/controller.votes.js";
 import { verifyToken } from "./utlis/verifytoken.js";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -30,7 +30,7 @@ app.post("/register", signup);
 app.post("/login", login);
 app.get("/poll", verifyToken, getvotes);
 
-app.post("/poll", verifyToken, sendvotes);
+app.post("/poll", verifyToken, sendVotes);
 
 app.listen(port, () => {
   console.log("Server is started on port 3000");

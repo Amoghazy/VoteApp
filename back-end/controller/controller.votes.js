@@ -1,6 +1,4 @@
 import { Votes } from "../model/model.js";
-import path from "path";
-import { fileURLToPath } from "url";
 
 export const getvotes = async (req, res) => {
   let [db] = await Votes.find({}, { _id: 0 }).lean();
@@ -15,11 +13,16 @@ export const getvotes = async (req, res) => {
 
   res.json({ data, totalVotes });
 };
-export const sendvotes = async (req, res) => {
-  let [db] = await Votes.find({}, { _id: 0 }).lean();
-  db[req.body.add]++;
+export const sendVotes = async (req, res) => {
+  const votes = await Votes.findOne({}, { _id: 0 }).lean();
 
-  let x = await Votes.findOneAndUpdate({}, { ...db });
+  votes[req.body.add]++;
 
-  res.end(JSON.stringify(db));
+  const updatedVotes = await Votes.findOneAndUpdate(
+    {},
+    { ...votes },
+    { new: true }
+  );
+
+  res.end(JSON.stringify(votes));
 };

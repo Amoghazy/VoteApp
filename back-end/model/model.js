@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
 const voteSchema = new mongoose.Schema({
   Angular: Number,
   React: Number,
-  Both: Number,
+  VueJs: Number,
 });
 export const User = mongoose.model("Information", userSchema);
 

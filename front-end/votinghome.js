@@ -77,7 +77,8 @@ class Poll {
                 authorization: `Bearer ${sessionStorage.getItem("Token")}`,
                 "Content-Type": "application/json",
               },
-            }).then(() => {
+            }).then((res) => {
+              console.log(res.json());
               this.selected = option.label;
 
               sessionStorage.setItem("poll-selected", option.label);
