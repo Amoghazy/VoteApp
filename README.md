@@ -25,18 +25,24 @@ To set up the back-end, follow these steps:
 1. Clone the repository: `git clone <repository URL>`
 2. Navigate to the back-end directory: `cd back-end`
 3. Install the dependencies: `npm install`
-4. Download and install MongoDB from the official website: https://www.mongodb.com/try/download/community
-   ![MongoDB Download](https://miro.medium.com/v2/resize:fit:1400/1*Sjs7Nzu_bTD8yTxc7ssVXQ.png)
-   - check the package is msi.
-   - can follow this link to setup https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514
-5. Start the MongoDB server.
-6. Configure the database connection in the back-end code to connect to your locally running MongoDB instance.
-7. Start the server: `npm run start`
-8. The back-end will be running at: `http://localhost:3000`
+4. linked MongoDB hosted on MongoDB Atlas:  
+   -Create a MongoDB Atlas account and log in to your Atlas dashboard.
+   -Create a new MongoDB database or select an existing one.
+   -In the database settings, go to the "Network Access" tab.
+   -Click on the "Add IP Address" button and enter 0.0.0.0/0 in the IP address field. This will allow access from any IP address.
+   -Click on the "Confirm" button to save the changes.
+5. make .env file in back-end folder and add this line: `mongoUrl="mongodb+srv://<username>:<password>@<cluster-url>/<database-name>"`
+
+   - Replace <username>, <password>, <cluster-url>, and <database-name> with your own credentials.
+
+6. in your database the collection name is: `votes` insert your what do you want to vote like taht : {"Angular":1,"React":2,"VueJs"3}
+7. Configure the database connection in the back-end code to connect to your database.
+8. Start the server: `npm run start`
+9. The back-end will be running at: `http://localhost:3000`
 
 ## explanation
 
-This expanded version includes specific instructions for downloading and installing MongoDB, as well as configuring the database connection. Let me know if you need further assistance with this!
+This expanded version includes specific instructions for setting up the back-end using Node.js and Express.js. It provides detailed steps for downloading and installing the necessary dependencies, as well as configuring the MongoDB database connection hosted on MongoDB Atlas. By following these instructions, you can ensure that the back-end is properly set up to handle voting and store the votes in the database. Let me know if you need further assistance with this!
 
 ## Contact
 
